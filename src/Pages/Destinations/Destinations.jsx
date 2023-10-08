@@ -19,7 +19,7 @@ const Destinations = () => {
             <div data-aos="fade-right" className=" w-auto p-2 flex flex-col justify-center text-right">
                 <p className=' text-2xl font-extrabold'>Select Your Outstanding</p>
                 <h2 className="lg:text-6xl text-4xl font-bold">WEDDING<br/> DESTINATION!</h2>
-                <p className=' text-right'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor, delectus veniam ea eius incidunt molestiae cumque vitae asperiores provident.</p>
+                <p className=' text-right'>A wedding destination is a dreamy location where couples celebrate their special day. It offers a unique and picturesque backdrop, creating unforgettable memories in beautiful settings like beaches, rustic barns, charming villages, or tropical islands. It's a perfect choice for a romantic and adventurous wedding experience.</p>
                 <div>
                 <button className="btn btn-outline btn-secondary font-bold text-xl px-8 mt-4 mb-4">See All Venues</button>
                 </div>

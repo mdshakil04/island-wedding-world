@@ -14,9 +14,7 @@ const SendMessage = () => {
         <p className=" text-xl">We Plan Wedding's That Are</p>
         <h2 className="text-7xl font-bold font-serif">Grand</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, esse
-          officia cupiditate debitis necessitatibus eaque eligendi architecto
-          inventore eius delectus.
+        "Welcome to our message page! Feel free to leave us your thoughts, questions, or greetings. We can't wait to hear from you!"
         </p>
         <div className=" flex p-4 gap-4">
           <Link>
@@ -36,8 +34,8 @@ const SendMessage = () => {
       </div>
       <div className="flex flex-col items-center justify-center p-12">
         <h2 className="text-5xl font-bold font-serif">SEND US A MESSAGE</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, odio.
+        <p className=" text-center">
+        Welcome to our message page!<br></br> Feel free to leave us your thoughts, questions, or greetings. We can not wait to hear from you!
         </p>
 
         {/* md */}

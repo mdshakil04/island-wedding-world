@@ -2,7 +2,7 @@ import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos'; // Import AOS library
 import { useEffect } from 'react';
 const Service = ({ service }) => {
-  const { name, image, price } = service;
+  const { name, image, price, details } = service;
   useEffect(() => {
     AOS.init({
             duration: 1000, // Animation duration in milliseconds
@@ -19,6 +19,7 @@ const Service = ({ service }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title text-3xl">{name}</h2>
+        <p>{details}</p>
         <p className=" font-bold">Price: {price}</p>
         <div className="card-actions justify-start">
         <button className="btn btn-outline btn-secondary font-bold text-xl px-8">Book Now</button>
