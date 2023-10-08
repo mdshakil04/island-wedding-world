@@ -7,35 +7,35 @@
       "price": "$1,500 - $3,000"
     },
     {
-      "id":1,
+      "id":2,
       "name": "Catering",
       "image": "https://i.ibb.co/KKDHMNY/Catering.jpg",
       "details": "Delight your guests with a wide range of delicious dishes and catering options.",
       "price": "$50 - $100 "
     },
     {
-      "id":1,
+      "id":3,
       "name": "Bridal Makeup",
       "image": "https://i.ibb.co/XFbJS6M/Makeup.jpg",
       "details": "Look stunning on your wedding day with our expert bridal makeup artists.",
       "price": "$300 - $600"
     },
     {
-      "id":1,
+      "id":4,
       "name": "Cocktails",
       "image": "https://i.ibb.co/kQPHrFB/Cocktails.jpg",
       "details": "Raise a toast to love with our creative cocktail mixologists and drink options.",
       "price": "$10 - $20 "
     },
     {
-      "id":1,
+      "id":5,
       "name": "Transportation",
       "image": "https://i.ibb.co/HBTs1K6/Transfortation.jpg",
       "details": "Ensure seamless transportation for your guests with our chauffeur-driven vehicles.",
       "price": "$500 - $1,000"
     },
     {
-      "id":1,
+      "id":6,
       "name": "Decoration",
       "image": "https://i.ibb.co/JBsVnn7/Decoration.jpg",
       "details": "Transform your venue into a magical space with our beautiful wedding decorations.",
