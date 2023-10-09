@@ -9,7 +9,7 @@ const ServiceDetails = () => {
   const service = services.find((service) => service.id == id);
   const { name, image, price, details } = service;
   return (
-    <div className="container mx-auto grid grid-cols-2 shadow-xl gap-8 p-4">
+    <div className="container mx-auto md:grid md:grid-cols-2 shadow-xl gap-8 p-4">
       <figure>
         <img src={image} alt="Movie" />
       </figure>

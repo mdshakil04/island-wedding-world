@@ -1,12 +1,34 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext, useState } from "react";
 import signup from '../../assets/images/4957136.jpg'
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Firebase/AuthProvider";
 const Registration = () => {
+  const { createUser } = useContext(AuthContext);
+
+
+  const handleRegistration = e =>{
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    // const name = form.get('name');
+    const email = form.get('email');
+    const password = form.get('password');
+    // console.log(name, email, password)
+    createUser(email, password)
+    .then(result =>{
+      console.log(result.user)
+    })
+    .catch(error =>{
+      console.error(error)
+    })
+  }
+
+
+
   return (
     <div className=" container mx-auto grid md:grid-cols-2">
       <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-        <form className="card-body">
+        <form onClick={handleRegistration} className="card-body">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>

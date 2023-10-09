@@ -14,7 +14,7 @@ const Destinations = () => {
     <div className=" bg-gray-100 py-8 my-8">
       <div className=" w-auto md:grid md:grid-cols-2 gap-8 mt-8 container mx-auto shadow-lg">
         <div
-          data-aos="fade-right"
+          data-aos="fade-down"
           className=" w-auto p-2 flex flex-col justify-center text-right"
         >
           <p className=" text-2xl font-extrabold">Select Your Outstanding</p>
@@ -37,7 +37,7 @@ const Destinations = () => {
             </Link>
           </div>
         </div>
-        <div data-aos="fade-left" className=" md:grid md:grid-cols-2 gap-2">
+        <div data-aos="fade-up" className=" md:grid md:grid-cols-2 gap-2">
           <img
             src="https://i.ibb.co/F8g3Tq9/Aljaferia-Palace.png"
             alt="bangkok"

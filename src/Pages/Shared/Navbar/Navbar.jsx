@@ -1,8 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 import { FaUser } from 'react-icons/fa';
+import { useContext } from "react";
+import { AuthContext } from "../../../Firebase/AuthProvider";
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext)
+  const handleSignOut = () =>{
+      logOut()
+        .then()
+        .catch()
+  }
+
   const navLinks = (
     <>
       <li>
@@ -66,9 +75,15 @@ const Navbar = () => {
             <FaUser className=" text-3xl"></FaUser>
           </div>
         </label>
-        <Link to='/login'>
-          <button className="btn">Login</button>
-        </Link>
+        {
+            user ? 
+            <button onClick={handleSignOut} className="btn">Sign Out</button>
+            :
+            <Link to='/login'>
+            <button className="btn">Login</button>
+            </Link>
+        }
+       
       </div>
     </div>
   );

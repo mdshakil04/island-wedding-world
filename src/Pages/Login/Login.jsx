@@ -1,12 +1,33 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Firebase/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogin = e =>{
+    e.preventDefault();
+    // console.log(e.currentTarget)
+    const form = new FormData(e.currentTarget);
+    const email = form.get('email');
+    const password = form.get('password');
+    console.log(email, password);
+    signIn(email,password)
+    .then(result =>{
+      console.log(result.user)
+      navigate(location?.state ? location.state : '/');
+    })
+    .catch(error=>{
+      console.error(error)
+    })
+  }
     const { googleSignIn } = useContext(AuthContext);
     const handleGoogleSignIn = () =>{
         googleSignIn().then(result => {
             console.log(result.user)
+            navigate(location?.state ? location.state : '/');
         })
     }
   return (
@@ -19,7 +40,7 @@ const Login = () => {
           </p>
         </div>
         <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-          <form className="card-body">
+          <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -49,10 +70,11 @@ const Login = () => {
                 </a>
               </label>
             </div>
-            <div className="form-control mt-6">
-                <p>New User? Please <Link className=" text-red-600 font-bold" to='/register'>Register</Link></p>
+            <div className="form-control mt-2">
+               
             <button  className="btn btn-outline btn-secondary font-bold lg:text-xl px-8 mt-4 mb-4">Login</button>
             <button onClick={handleGoogleSignIn} className="btn btn-outline btn-secondary font-bold lg:text-xl px-8 mt-4 mb-4">Login With Google</button>
+            <p>New User? Please <Link className=" text-red-600 font-bold" to='/register'>Register</Link></p>
             </div>
           </form>
         </div>
