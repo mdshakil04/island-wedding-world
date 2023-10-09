@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-// import logo from "../../../assets/images/logo.png";
+import logo from "../../../assets/images/logo.png";
 import { FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
         <NavLink to="/gallery">Gallery</NavLink>
       </li>
       <li>
-        <NavLink to="/venues">Venues</NavLink>
+        <NavLink to="/destination">Venues</NavLink>
       </li>
       <li>
         <NavLink to="/contact">Contact Us</NavLink>
@@ -53,9 +53,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-            <h2 className=" text-2xl font-bold font-serif ml-8 text-center">Island<br/> <span className=" text-pink-400">Wedding</span><br/> World</h2>
+            <img className=" w-1/4" src={logo} alt="island-wedding-world" />
         </div>
-        {/* <img className=" w-1/3" src={logo} alt="island-wedding-world" /> */}
+        
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>

@@ -3,9 +3,18 @@ import member2 from "../../assets/images/Jane Turner.png";
 import member3 from "../../assets/images/Julia Boyd.png";
 import member4 from "../../assets/images/Mike Stuwart.png";
 import carosel from '../../assets/images/Contact-us.png'
+import React from "react";import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos'; // Import AOS library
+import { useEffect } from 'react';
 import { FaBeer, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            delay: 200, 
+    });
+  }, []);
   return (
     <div>
       <div className=" container mx-auto">
@@ -17,7 +26,7 @@ const About = () => {
           </p>
         </div>
         <div className="container mx-auto grid lg:grid-cols-4 gap-4 p-4">
-          <div className=" shadow-lg rounded-lg text-center flex flex-col">
+          <div  data-aos="fade-right" className=" shadow-lg rounded-lg text-center flex flex-col">
             <img
               className="lg:h-[500px] rounded-lg"
               src={member1}
@@ -31,7 +40,7 @@ const About = () => {
               <FaTwitter className=" text-2xl text-blue-600"></FaTwitter>
             </div>
           </div>
-          <div className=" shadow-lg rounded-lg text-center flex flex-col">
+          <div data-aos="fade-right" className=" shadow-lg rounded-lg text-center flex flex-col">
             <img
               className="lg:h-[500px] rounded-lg"
               src={member2}
@@ -45,7 +54,7 @@ const About = () => {
               <FaTwitter className=" text-2xl text-blue-600"></FaTwitter>
             </div>
           </div>
-          <div className=" shadow-lg rounded-lg text-center flex flex-col">
+          <div data-aos="fade-left" className=" shadow-lg rounded-lg text-center flex flex-col">
             <img
               className="lg:h-[500px] rounded-lg"
               src={member4}
@@ -59,7 +68,7 @@ const About = () => {
               <FaTwitter className=" text-2xl text-blue-600"></FaTwitter>
             </div>
           </div>
-          <div className=" shadow-lg rounded-lg text-center flex flex-col">
+          <div data-aos="fade-left" className=" shadow-lg rounded-lg text-center flex flex-col">
             <img
               className="lg:h-[500px] rounded-lg"
               src={member3}

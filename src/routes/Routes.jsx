@@ -9,6 +9,8 @@ import Contact from "../Pages/Contact Us/Contact";
 import Login from "../Pages/Login/Login";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Registration from "../Pages/Registration/Registration";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
+import Venues from "../Pages/Destinations/Venues/Venues";
 
 const routes = createBrowserRouter([
     {
@@ -33,7 +35,7 @@ const routes = createBrowserRouter([
                 element:<Gallery></Gallery>
             },
             {
-                path:'/venues',
+                path:'/destination',
                 element:<Destinations></Destinations>
             },
             {
@@ -47,6 +49,15 @@ const routes = createBrowserRouter([
             {
                 path:'/register',
                 element:<Registration></Registration>
+            },
+            {
+                path:'/service/:id',
+                element: <ServiceDetails></ServiceDetails>,
+                loader:() => fetch('../services.json')
+            },
+            {
+                path:'/venues',
+                element: <Venues></Venues>
             }
         ]
     }

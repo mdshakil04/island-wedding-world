@@ -12,7 +12,7 @@ const WeddingPlanners = () => {
       }, []);
     return (
         <div className=" bg-gray-100 ">
-            <div className=' container mx-auto mt-8 py-8 grid md:grid-cols-2'>
+            <div className=' container mx-auto py-8 grid md:grid-cols-2'>
                 <div data-aos="fade-right">
                     <img src={collage} alt="" />
                 </div>

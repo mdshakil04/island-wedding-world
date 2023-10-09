@@ -2,14 +2,14 @@ import banner from '../../assets/images/main-banner.jpg'
 const Banner = () => {
   return (
     <div>
-      <div data-aos="fade-down"
-        className="hero h-[750px] w-auto"
+      <div data-aos="zoom-in"
+        className="hero h-[800px] w-auto"
         style={{
           backgroundImage:
             "url(https://i.ibb.co/2PmJgkS/main-banner.jpg)",
         }}
       >
-        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-overlay bg-opacity-70"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className=" text-white">
             <p className=' md:text-3xl text-2xl font-serif'>Country's Best Luxury</p>
